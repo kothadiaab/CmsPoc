@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+</head>
+<body style="background-color: #F8F8F8">
+    <header class="content-header">
+        <img src="images/header-1.png" alt="logo" style="width: 94%; margin-left: 30px"/>
+    </header>
+    <div style="margin-left: 42px">
+        <span><a style="text-decoration: none; font-family: sans-serif" href="gds.html">Home</a></span>
+        <!--<span><img src="images/bread.jpg" alt=""/></span>-->
+        <span style="margin-left: 0px; font-family: sans-serif">-> My Dashboard</span>
+        <span><a style="text-decoration: none; font-family: sans-serif; margin-right: 40px; float: right" href="gds.html">Buy Guides</a></span>
+        <div>
+            <input class="dashboard-guide" type="button" id="writeNewGuide" value="Write Guide"/>
+        </div>
+        <br style="clear: both"/>
+    </div>
+    <div>&nbsp;</div>
+    <div id="user-dashboard" style="margin-left: 50px; border: none">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#dashboard">Dashboard</a></li>
+            <li><a data-toggle="tab" href="#metrics">Metrics</a></li>
+        </ul>
+
+        <div class="tab-content" style="border: 1px solid royalblue; margin-right: 35px">
+            <div id="dashboard" class="tab-pane fade in active">
+                <div class="col-sm-4">
+                    <h3>My dashboard</h3>
+                </div>
+                <div class="col-sm-8">
+                    <span style="float: right; margin-right: 15px"><input class="dashboard-search" type="search" placeholder="Search" style="text-indent: 5px"/></span>
+                </div>
+                <br style="clear: both"/>
+                <div class="table-responsive col-sm-12">
+                    <table class="table table-bordered table-hover">
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Status Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-1 col-centered">1</td>
+                            <td class="col-sm-4" style="color: royalblue">5 tips for picking Western Digital HDD</td>
+                            <td class="col-sm-2 col-centered">Feb 26, 2016</td>
+                            <td class="col-sm-2 col-centered">Scheduled</td>
+                            <td class="col-sm-2 col-sm-offset-10">
+                                <span><img src="images/Pencil.png" alt="" title="Edit"/></span>
+                                <span><img src="images/Persmission.png" alt="" title="Permission"/></span>
+                                <span><img src="images/trash.png" alt="" title="Delete"/></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="col-sm-4" style="color: royalblue">How to Buy a Car Traller on eBay</td>
+                            <td>Feb 26, 2016</td>
+                            <td>Published</td>
+                            <td>
+                                <span><img src="images/Pencil.png" alt="" title="Edit"/></span>
+                                <span><img src="images/Persmission.png" alt="" title="Permission"/></span>
+                                <span><img src="images/trash.png" alt="" title="Delete"/></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="col-sm-4" style="color: royalblue">Cool Home Decor Gadgets</td>
+                            <td>Feb 26, 2016</td>
+                            <td>In Progress</td>
+                            <td>
+                                <span><img src="images/Pencil.png" alt="" title="Edit"/></span>
+                                <span><img src="images/Persmission.png" alt="" title="Permission"/></span>
+                                <span><img src="images/trash.png" alt="" title="Delete"/></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="col-sm-4" style="color: royalblue">5 tips for picking Western Digital HDD</td>
+                            <td>Feb 26, 2016</td>
+                            <td>Published</td>
+                            <td>
+                                <span><img src="images/Pencil.png" alt="" title="Edit"/></span>
+                                <span><img src="images/Persmission.png" alt="" title="Permission"/></span>
+                                <span><img src="images/trash.png" alt="" title="Delete"/></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="col-sm-4" style="color: royalblue">5 tips for picking Western Digital HDD</td>
+                            <td>Feb 26, 2016</td>
+                            <td>In Progress</td>
+                            <td>
+                                <span><img src="images/Pencil.png" alt="" title="Edit"/></span>
+                                <span><img src="images/Persmission.png" alt="" title="Permission"/></span>
+                                <span><img src="images/trash.png" alt="" title="Delete"/></span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!--<div class="col-sm-2 dashboardRight-div">-->
+                    <!--<p style="margin-top: 15px; margin-bottom: 53px">Lorem Ipsum dolor  sit amet, consectuter adipiscing ellt. Donec concectuter erat vitae eulsmod ultricles</p>-->
+                    <!--<input class="preview-publish" style="margin-bottom: 25px; margin-top: 40px" type="button" id="write-guide" value="Write Guide"/>-->
+                <!--</div>-->
+                <br style="clear: both;"/>
+            </div>
+            <div id="metrics" class="tab-pane fade">
+                <div class="col-sm-12">
+                    <select style="margin: 15px 0px 10px 0px; width: 250px;">
+                        <option value="volvo">Select Published Metric</option>
+                        <option value="saab">Metric 1</option>
+                        <option value="opel">Metric 2</option>
+                        <option value="audi">Metric 3</option>
+                    </select>
+                    <span>
+                        <input class="dashboard-guide" type="button" id="refresh-count" value="Refresh"/>
+                    </span>
+                </div>
+                <div>&nbsp;</div>
+                <div class="table-responsive col-sm-12">
+                    <table class="table table-bordered table-hover" style="margin-right: 15px">
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Count</th>
+                            <th>Published Date</th>
+                            <!--<th>Action</th>-->
+                        </tr>
+                        <tr>
+                            <td class="col-sm-1 col-centered">1</td>
+                            <td class="col-sm-4" style="color: royalblue">5 tips for picking Western Digital HDD</td>
+                            <td class="col-sm-2 col-centered" id="count1"></td>
+                            <td class="col-sm-2 col-centered">Feb 28, 2016</td>
+                            <!--<td class="col-sm-1 col-sm-offset-10">-->
+                                <!--<span><img src="images/update.png" alt=""/></span>-->
+                            <!--</td>-->
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="col-sm-4" style="color: royalblue">How to Buy a Car Traller on eBay</td>
+                            <td id="count2">17621</td>
+                            <td>March 1, 2016</td>
+                            <!--<td>-->
+                                <!--<span><img src="images/update.png" alt=""/></span>-->
+                            <!--</td>-->
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="col-sm-4" style="color: royalblue">Cool Home Decor Gadgets</td>
+                            <td id="count3">10435</td>
+                            <td>Jan 12, 2016</td>
+                            <!--<td>-->
+                                <!--<span><img src="images/update.png" alt=""/></span>-->
+                            <!--</td>-->
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="col-sm-4" style="color: royalblue">5 tips for picking Western Digital HDD</td>
+                            <td id="count4">14398</td>
+                            <td>Dec 01, 2015</td>
+                            <!--<td>-->
+                                <!--<span><img src="images/update.png" alt=""/></span>-->
+                            <!--</td>-->
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="col-sm-4" style="color: royalblue">5 tips for picking Western Digital HDD</td>
+                            <td id="count5">10002</td>
+                            <td>Feb 29, 2016</td>
+                            <!--<td>-->
+                                <!--<span><img src="images/update.png" alt=""/></span>-->
+                            <!--</td>-->
+                        </tr>
+                    </table>
+                </div>
+                <br style="clear: both;"/>
+            </div>
+        </div>
+        <br style="clear: both"/>
+        <div>&nbsp;</div>
+        <p><small style="color: red;">Disclaimer: This is an indicative proof of concept for illustrative purpose only and is not fully functional.</small></p>
+    </div>
+    <footer class="footer-content">
+        <img src="images/FooterIMG.png" alt=""/>
+    </footer>
+
+    <div id="templateModal" class="template-modal">
+        <form method="get" action="content.html">
+            <div class="modal-content">
+                <!--<div class="h2title">CHOOSE TEMPLATE</div>-->
+                <div class="col-sm-12 template-header-data">
+                    <!--<p class="close" aria-label="Close"><img src="images/close.png" alt=""/></p>-->
+                    <h2 class="header-data" style="margin-top: 4px">Choose content type</h2>
+                    <span class="close" aria-label="Close" style="margin-top: -54px; margin-right: 0px"><img src="images/close.png" alt=""/></span>
+                </div>
+                <div>
+                    <div id="template1" class="template-options">
+                        <div style="margin-top: 10px">
+                            <h6>Guide</h6>
+                        </div>
+                        <div>&nbsp;</div>
+                        <img class="img-dim" src="images/basic.png" alt="Basic template image"/>
+                        <!--<div>&nbsp;</div>-->
+                        <div>
+                            <input id="radio1" class="radio-class" type="radio" name="radio-group1" value="Basic" checked/>
+                        </div>
+
+                        <!--<div>&nbsp;</div>-->
+                        <div>
+                            <p class="template-text">How-to: Think recipes and DIY projects</p>
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                    <div id="template2" class="template-options">
+                        <div style="margin-top: 10px">
+                            <h6>Story</h6>
+                        </div>
+                        <div>&nbsp;</div>
+                        <img class="img-dim" src="images/longformImage.png" alt="Basic template image"/>
+                        <!--<div>&nbsp;</div>-->
+                        <div>
+                            <input id="radio2" class="radio-class" type="radio" name="radio-group1" value="Long Form"/>
+                        </div>
+
+                        <!--<div>&nbsp;</div>-->
+                        <div>
+                            <p class="template-text">Think stories, product comparisons etc</p>
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                    <div id="template3" class="template-options">
+                        <div style="margin-top: 10px">
+                            <h6>List</h6>
+                        </div>
+                        <div>&nbsp;</div>
+                        <img class="img-dim" src="images/best%20rated.png" alt="Basic template image"/>
+                        <!--<div>&nbsp;</div>-->
+                        <div>
+                            <input id="radio3" class="radio-class" type="radio" name="radio-group1" value="Listicle"/>
+                        </div>
+
+                        <!--<div>&nbsp;</div>-->
+                        <div>
+                            <p class="template-text">Think automated lists like trending, hot products.</p>
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+                <br style="clear:both;"/>
+                <hr>
+                <div>
+                    <input id="cont-button" type="submit" value="Continue" class="cont-action"/>
+                    <input id="cancel-button" type="reset" value="Cancel" class="cancel-action"/>
+                </div>
+                <br style="clear: both"/>
+                <!--<div>&nbsp;</div>-->
+                <!--<div>&nbsp;</div>-->
+                <!--<div>&nbsp;</div>-->
+                <p><small style="color: red; margin-left: 10px">Disclaimer: This is an indicative proof of concept for illustrative purpose only and is not fully functional.</small></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

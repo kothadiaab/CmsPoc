@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Content Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+</head>
+<body style="background-color: #F8F8F8">
+<!--<form>-->
+    <header class="content-header">
+        <div class="col-sm-12">
+            <img src="images/header-1.png" alt="logo" />
+        </div>
+    </header>
+    <!--<hr class="content-hr"/>-->
+    <div style="margin-left: 8px">
+        <span><small><a style="text-decoration: none; font-family: sans-serif" href="gds.html">Home</a></small></span>
+        <!--<span><img src="images/bread.jpg" alt=""/></span>-->
+        <span style="margin-left: 0px; font-family: sans-serif"><small>-> create guide</small></span>
+        <span><small><a style="text-decoration: none; font-family: sans-serif; margin-left: 900px" href="dashboard.html">My Dashboard</a></small></span>
+    </div>
+    <div>&nbsp;</div>
+    <div>
+            <table class="table-content">
+                <tr>
+                    <td class="title-td">
+                        <input type="text" id="add-title" class="add-title" placeholder="Your Title"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="editor-img">
+                        <div style="margin: 5px">
+                            <span><img src="images/paragraph.png" alt="Paragraph"/></span>
+                            <span><img src="images/Bold.png" alt="Bold"/></span>
+                            <span><img src="images/italic.png" alt="Italic"/></span>
+                            <span><img src="images/underline.png" alt="Code"/></span>
+                            <span><img src="images/Font.png" alt="Code"/></span>
+                            <span><img src="images/fontColor.png" alt="Code"/></span>
+                            <span><img src="images/list.png" alt="Bullet List"/></span>
+                            <span><img src="images/list2.png" alt="Number List"/></span>
+                            <span><img src="images/link.png" alt="Link"/></span>
+                            <span><img src="images/img.png" alt="Image"/></span>
+                            <span><img src="images/Listing.png" alt="Listing"/></span>
+                            <span><img src="images/collection.png" alt="Collection"/></span>
+                            <span><img src="images/tracking.png" alt="Tracking"/></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea class="textarea-align" name="" cols="83" rows="6" placeholder="Begin writing the section"></textarea>
+                        <div class="img-div">
+                            <span class="close-camera">x</span>
+                            <img class="camera-image" src="images/camera.png" alt="Add Image"/>
+                        </div>
+                        <div class="subtitle-section">
+                            <span class="close-camera">x</span>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="text" class="subtitle-title" placeholder="Your Subtitle"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <textarea class="subtitle-align" name="" cols="50" rows="11" placeholder="Begin writing the section"></textarea>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="img-div" style="visibility: hidden">
+                            <img class="camera-image" src="images/camera.png" alt=""/>
+                        </div>
+                        <div class="subtitle-section" style="visibility: hidden">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="text" class="subtitle-title" placeholder="Your Subtitle"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <textarea class="subtitle-align" name="" cols="50" rows="11" placeholder="Begin writing the section"></textarea>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br style="clear: both"/>
+                        <div>&nbsp;</div><div>&nbsp;</div>
+                    </td>
+                </tr>
+            </table>
+    </div>
+    <div>
+        <img class="right-div" src="images/rightImag.png" alt="rightmap" title="Drag and Drop Menu"/>
+    </div>
+    <br style="clear: both"/>
+    <div>
+        <input class="tag-input" type="text" placeholder="Add Tags"/>
+    </div>
+    <br style="clear: both"/>
+    <div class="button-div">
+        <a id="content-cancel" href="gds.html" style="display: none;"></a>
+        <input class="cancel-content" type="reset" id="cancel-content" value="Cancel" onclick="document.getElementById('content-cancel').click(); return false;"/>
+        <a id="draft-dashboard" href="dashboard.html" style="display: none;"></a>
+        <input class="save-draft" type="submit" id="save-draft" value="Save as Daft" onclick="document.getElementById('draft-dashboard').click(); return false;"/>
+        <input class="preview-publish" type="submit" id="preview-publish" value="Preview and Publish"/>
+    </div>
+    <br style="clear: both"/>
+    <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+    <footer class="footer-content">
+        <img src="images/FooterIMG.png" alt=""/>
+    </footer>
+<!--</form>-->
+
+<div id="publishModal" class="publish-modal">
+    <!--<form>-->
+        <div class="modal-content">
+            <!--<div class="h2title">CHOOSE TEMPLATE</div>-->
+            <div class="publish-header-data">
+                <p class="close" aria-label="Close"><img src="images/close.png" alt=""/></p>
+                <h2 class="header-data">Preview</h2>
+            </div>
+            <p class="publish-title"> 6 Things You Should Know About Galveston Bay<br/>Oysters</p>
+            <div>
+                <p class="publish-subtitle"><i>Posted 11,24,2016</i></p>
+            </div>
+            <div>
+                <p class="listicle-points">1. HOME GYM 101</p>
+                <div>
+                    <img class="publish-image" src="images/img1.png" alt="laptop"/>
+                    <p style="margin-right: 30px">Lorem Ipsum dolor  sit amet, consectuter adipiscing ellt. Donec concectuter erat vitae eulsmod ultricles, quam tortor porta fells, sed sempler justo ediit sodales est. Duls luctus, dolor quls elefend pellentesque, lacus arcu portitor eliit, eget sollicitudin massa nunc eget ercu.</p>
+                    <p style="margin-right: 15px">Sed semper justo elit sodales est. Duls luctus, dolor quls elefend pellentesque.</p>
+                    <br style="clear: both;"/>
+                </div>
+            </div>
+            <div>
+                <p class="listicle-points">2. TRAVEL WELL</p>
+                <div>
+                    <img class="publish-image" src="images/laptop.png" alt="laptop"/>
+                    <p style="margin-right: 30px">Lorem Ipsum dolor  sit amet, consectuter adipiscing ellt. Donec concectuter erat vitae eulsmod ultricles, quam tortor porta fells, sed sempler justo ediit sodales est. Duls luctus, dolor quls elefend pellentesque, lacus arcu portitor eliit, eget sollicitudin massa nunc eget ercu.</p>
+                    <p style="margin-right: 15px">Sed semper justo elit sodales est. Duls luctus, dolor quls elefend pellentesque.</p>
+                    <br style="clear: both;"/>
+                </div>
+            </div>
+            <div>
+                <p class="listicle-points">3. PEAK OYSTER SEASON</p>
+                <div>
+                    <img class="publish-image" src="images/img1.png" alt="laptop"/>
+                    <p style="margin-right: 30px">Lorem Ipsum dolor  sit amet, consectuter adipiscing ellt. Donec concectuter erat vitae eulsmod ultricles, quam tortor porta fells, sed sempler justo ediit sodales est. Duls luctus, dolor quls elefend pellentesque, lacus arcu portitor eliit, eget sollicitudin massa nunc eget ercu.</p>
+                    <p style="margin-right: 15px">Sed semper justo elit sodales est. Duls luctus, dolor quls elefend pellentesque.</p>
+                    <br style="clear: both;"/>
+                </div>
+            </div>
+            <div>
+                <p class="listicle-points">4. HOME GYM</p>
+                <div>
+                    <img class="publish-image" src="images/laptop.png" alt="laptop"/>
+                    <p style="margin-right: 30px">Lorem Ipsum dolor  sit amet, consectuter adipiscing ellt. Donec concectuter erat vitae eulsmod ultricles, quam tortor porta fells, sed sempler justo ediit sodales est. Duls luctus, dolor quls elefend pellentesque, lacus arcu portitor eliit, eget sollicitudin massa nunc eget ercu.</p>
+                    <p style="margin-right: 15px">Sed semper justo elit sodales est. Duls luctus, dolor quls elefend pellentesque.</p>
+                    <br style="clear: both;"/>
+                </div>
+            </div>
+            <div>
+                <p class="listicle-points">5. PEAK OYSTER SEASON</p>
+                <div>
+                    <img class="publish-image" src="images/img1.png" alt="laptop"/>
+                    <p style="margin-right: 30px">Lorem Ipsum dolor  sit amet, consectuter adipiscing ellt. Donec concectuter erat vitae eulsmod ultricles, quam tortor porta fells, sed sempler justo ediit sodales est. Duls luctus, dolor quls elefend pellentesque, lacus arcu portitor eliit, eget sollicitudin massa nunc eget ercu.</p>
+                    <p style="margin-right: 15px">Sed semper justo elit sodales est. Duls luctus, dolor quls elefend pellentesque.</p>
+                    <br style="clear: both;"/>
+                </div>
+            </div>
+            <div>
+                <p class="listicle-points">6. TRAVEL WELL</p>
+                <div>
+                    <img class="publish-image" src="images/laptop.png" alt="laptop"/>
+                    <p style="margin-right: 30px">Lorem Ipsum dolor  sit amet, consectuter adipiscing ellt. Donec concectuter erat vitae eulsmod ultricles, quam tortor porta fells, sed sempler justo ediit sodales est. Duls luctus, dolor quls elefend pellentesque, lacus arcu portitor eliit, eget sollicitudin massa nunc eget ercu.</p>
+                    <p style="margin-right: 15px">Sed semper justo elit sodales est. Duls luctus, dolor quls elefend pellentesque.</p>
+                    <br style="clear: both;"/>
+                </div>
+            </div>
+            <br style="clear:both;"/>
+            <hr style="width: 600px; margin-left: 47px"/>
+            <div>
+                <input id="cont-button" type="submit" value="Publish" class="cont-action"/>
+                <input id="cancel-button" type="reset" value="Cancel" class="cancel-action"/>
+            </div>
+            <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+        </div>
+    <!--</form>-->
+</div>
+
+
+<div id="publishSubmitModal" class="publishSubmit-modal">
+    <!--<form method="get" action="dashboard.html">-->
+        <div class="SubmitModal-content">
+            <!--<div class="h2title">CHOOSE TEMPLATE</div>-->
+            <div>
+                <p id="submitTop-cancel" class="close" aria-label="Close"><img src="images/close.png" alt=""/></p>
+                <h2 class="successPublish-data">Publish</h2>
+            </div>
+            <div>
+                <p class="publishSuccess-text">Are you sure you want to publish?</p><br/>
+                <div>
+                    <label for="cal-input" id="calender-input">Select Date for Publish</label>
+                    <span id="cal-input">
+                        <input class="caln-input" type="text" id="caln-input"/>
+                    </span>
+                </div>
+            </div>
+            <br style="clear:both;"/>
+            <hr style="width: 335px; margin-left: 25px"/>
+            <div>
+                <input id="cancelSubmit-button" type="reset" value="Cancel" class="cancelSubmit-action"/>
+                <span><input id="publishSubmit-button" style="float: right" type="submit" value="Submit" class="submit-action"/></span>
+            </div>
+            <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+        </div>
+    <!--</form>-->
+</div>
+
+
+<div id="publishValidModal" class="publishValid-modal">
+    <!--<form method="get" action="dashboard.html">-->
+    <div class="ValidModal-content">
+        <!--<div class="h2title">CHOOSE TEMPLATE</div>-->
+        <div>
+            <p id="validTop-cancel" class="close" aria-label="Close"><img src="images/close.png" alt=""/></p>
+            <h2 class="successPublish-data">Validate</h2>
+        </div>
+        <div>
+            <p class="publishSuccess-text">Sorry your content does not competing with eBay Content Policy!</p><br/>
+        </div>
+        <br style="clear:both;"/>
+        <hr style="width: 335px; margin-left: 25px"/>
+        <div>
+            <input id="valid-button" type="submit" value="Back" class="dashboard-action"/>
+        </div>
+        <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+    </div>
+    <!--</form>-->
+</div>
+
+
+<div id="publishValidationModal" class="publishValidation-modal">
+    <!--<form method="get" action="dashboard.html">-->
+    <div class="ValidationModal-content">
+        <!--<div class="h2title">CHOOSE TEMPLATE</div>-->
+        <div>
+            <p id="validationTop-cancel" class="close" aria-label="Close"><img src="images/close.png" alt=""/></p>
+            <h2 class="successPublish-data">Validate</h2>
+        </div>
+        <div>
+            <p class="publishSuccess-text">Category and content does not match!<br/>Please validate!</p><br/>
+        </div>
+        <br style="clear:both;"/>
+        <hr style="width: 335px; margin-left: 25px"/>
+        <div>
+            <input id="validation-button" type="submit" value="Back" class="dashboard-action"/>
+        </div>
+        <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+    </div>
+    <!--</form>-->
+</div>
+
+
+<div id="publishSuccessModal" class="publishSuccess-modal">
+    <form method="get" action="dashboard.html">
+        <div class="SuccessModal-content">
+            <div>
+                <p id="successTop-cancel" class="close" aria-label="Close"><img src="images/close.png" alt=""/></p>
+                <h2 class="successPublish-data">Success!</h2>
+            </div>
+            <div>
+                <p class="publishSuccess-text">Congratulations your page is successfully<br/> published. </p>
+            </div>
+            <br style="clear:both;"/>
+            <hr style="width: 335px; margin-left: 25px"/>
+            <div>
+                <input id="dasboard-button" type="submit" value="Dashboard" class="dashboard-action"/>
+            </div>
+            <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+        </div>
+    </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="publish.js"></script>
+</body>
+</html>
