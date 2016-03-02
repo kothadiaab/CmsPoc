@@ -87,3 +87,22 @@ publishSuccessBtn.onclick = function() {
     publishSuccessModal.style.display = "block";
 }
 
+
+
+jQuery(document).ready(function ($) {
+
+    $("#contentarea").contentbuilder({
+        //zoom: 0.85,
+        snippetOpen: true,
+        //toolbar: 'left',
+        snippetFile: 'assets/default/snippets.html'
+    });
+
+});
+
+
+function view() {
+    var sHTML = $('#contentarea').data('contentbuilder').viewHtml();
+    //alert(sHTML);
+}
+

@@ -6,6 +6,8 @@
     <title>Content Page</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link href="assets/default/content.css" rel="stylesheet" type="text/css" />
+    <link href="ContentBuilder/scripts/contentbuilder.css" rel="stylesheet" type="text/css" />
 </head>
 <body style="background-color: #F8F8F8">
 <!--<form>-->
@@ -15,14 +17,13 @@
         </div>
     </header>
 
-    <div class="col-sm-9" style="margin-left: 11px">
+    <div class="col-sm-7" style="margin-left: 11px">
         <span><small><a style="text-decoration: none; font-family: sans-serif;" href="gds.html">Home</a></small></span>
         <span style="margin-left: 0px; font-family: sans-serif"><small>-> create guide</small></span>
     </div>
-    <div class="col-sm-3" style="float: right">
+    <div class="col-sm-3" style="margin-left: 20px">
         <span><a style="text-decoration: none; font-family: sans-serif; float: right; margin-right: 111px" href="dashboard.html">My Dashboard</a></span>
     </div>
-
 
     <!--<div class="col-sm-12" style="margin-left: 11px">-->
         <!--<span><small><a style="text-decoration: none; font-family: sans-serif;" href="gds.html">Home</a></small></span>-->
@@ -31,8 +32,8 @@
     <!--</div>-->
     <br style="clear: both"/>
     <div>&nbsp;</div>
-    <div class="col-sm-8">
-        <table class="table-content">
+    <div class="col-sm-12">
+        <table class="table-content col-sm-9">
             <tr>
                 <td class="title-td">
                     <input type="text" id="add-title" class="add-title" placeholder="Your Title"/>
@@ -59,69 +60,70 @@
             </tr>
             <tr>
                 <td>
-                    <div class="col-sm-12">
-                        <textarea class="textarea-align" name="" cols="83" rows="6" placeholder="Begin writing the section"></textarea>
+                    <div class="col-sm-12" id="contentarea">
                     </div>
-                    <div class="img-div">
-                        <span class="close-camera">x</span>
-                        <img class="camera-image" src="images/camera.png" alt="Add Image"/>
-                    </div>
-                    <div class="subtitle-section">
-                        <span class="close-camera">x</span>
-                        <table>
-                            <tr>
-                                <td>
-                                    <input type="text" class="subtitle-title" placeholder="Your Subtitle"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <textarea class="subtitle-align" name="" cols="50" rows="10" placeholder="Begin writing the section"></textarea>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="img-div" style="visibility: hidden">
-                        <img class="camera-image" src="images/camera.png" alt=""/>
-                    </div>
-                    <div class="subtitle-section" style="visibility: hidden">
-                        <table>
-                            <tr>
-                                <td>
-                                    <input type="text" class="subtitle-title" placeholder="Your Subtitle"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <textarea class="subtitle-align" name="" cols="50" rows="10" placeholder="Begin writing the section"></textarea>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <br style="clear: both"/>
-                    <div>&nbsp;</div><div>&nbsp;</div>
+                        <!--<div class="col-sm-12">-->
+                            <!--<textarea class="textarea-align" name="" cols="83" rows="6" placeholder="Begin writing the section"></textarea>-->
+                        <!--</div>-->
+                        <!--<div class="img-div">-->
+                            <!--<span class="close-camera">x</span>-->
+                            <!--<img class="camera-image" src="images/camera.png" alt="Add Image"/>-->
+                        <!--</div>-->
+                        <!--<div class="subtitle-section">-->
+                            <!--<span class="close-camera">x</span>-->
+                            <!--<table>-->
+                                <!--<tr>-->
+                                    <!--<td>-->
+                                        <!--<input type="text" class="subtitle-title" placeholder="Your Subtitle"/>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td>-->
+                                        <!--<textarea class="subtitle-align" name="" cols="50" rows="10" placeholder="Begin writing the section"></textarea>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                            <!--</table>-->
+                        <!--</div>-->
+                        <!--<div class="img-div" style="visibility: hidden">-->
+                            <!--<img class="camera-image" src="images/camera.png" alt=""/>-->
+                        <!--</div>-->
+                        <!--<div class="subtitle-section" style="visibility: hidden">-->
+                            <!--<table>-->
+                                <!--<tr>-->
+                                    <!--<td>-->
+                                        <!--<input type="text" class="subtitle-title" placeholder="Your Subtitle"/>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td>-->
+                                        <!--<textarea class="subtitle-align" name="" cols="50" rows="10" placeholder="Begin writing the section"></textarea>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                            <!--</table>-->
+                        <!--</div>-->
+                    <!--<br style="clear: both"/>-->
+                    <!--<div>&nbsp;</div><div>&nbsp;</div>-->
                 </td>
             </tr>
         </table>
     </div>
-    <div class="col-sm-4">
-        <img src="images/rightImag.png" style="margin-left: 40px" alt="rightmap" title="Drag and Drop Templates to editor"/>
-    </div>
     <br style="clear: both"/>
-    <div class="col-sm-12">
+    <div class="col-sm-9">
         <input class="tag-input" type="text" placeholder="Add Tags"/>
     </div>
     <br style="clear: both"/>
-    <div class="col-sm-9" style="float: right">
-        <a id="content-cancel" href="gds.html" style="display: none;"></a>
-        <input class="cancel-content" type="reset" id="cancel-content" value="Cancel" onclick="document.getElementById('content-cancel').click(); return false;"/>
-        <a id="draft-dashboard" href="dashboard.html" style="display: none;"></a>
-        <input class="save-draft" type="submit" id="save-draft" value="Save as Draft" onclick="document.getElementById('draft-dashboard').click(); return false;"/>
-        <input class="preview-publish" type="submit" id="preview-publish" value="Preview and Publish"/>
+    <div class="col-sm-9" style="margin-left: 30px">
+        <div style="float: right;">
+            <a id="content-cancel" href="gds.html" style="display: none;"></a>
+            <input class="cancel-content" type="reset" id="cancel-content" value="Cancel" onclick="document.getElementById('content-cancel').click(); return false;"/>
+            <a id="draft-dashboard" href="dashboard.html" style="display: none;"></a>
+            <input class="save-draft" type="submit" id="save-draft" value="Save as Draft" onclick="document.getElementById('draft-dashboard').click(); return false;"/>
+            <input class="preview-publish" type="submit" id="preview-publish" value="Preview and Publish"/>
+        </div>
     </div>
     <br style="clear: both"/>
     <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
-    <p><small style="color: red; margin-left: 10px">Disclaimer: This is an indicative proof of concept for illustrative purpose only and is not fully functional.</small></p>
+<p style="text-align: center"><small style="color: red;">Disclaimer: This is an indicative proof of concept for illustrative purpose only and is not fully functional.</small></p>
     <footer class="footer-content">
         <img src="images/FooterIMG.png" alt=""/>
     </footer>
@@ -200,7 +202,7 @@
                 <input id="cancel-button" type="reset" value="Cancel" class="cancel-action"/>
             </div>
             <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
-            <p><small style="color: red; margin-left: 10px">Disclaimer: This is an indicative proof of concept for illustrative purpose only and is not fully functional.</small></p>
+            <p style="text-align: center"><small style="color: red;">Disclaimer: This is an indicative proof of concept for illustrative purpose only and is not fully functional.</small></p>
         </div>
     <!--</form>-->
 </div>
@@ -227,7 +229,7 @@
             <hr/>
             <div>
                 <input id="cancelSubmit-button" type="reset" value="Cancel" class="cancelSubmit-action"/>
-                <span><input id="publishSubmit-button" style="float: right" type="submit" value="Submit" class="submit-action"/></span>
+                <span style="margin-left: 0px"><input id="publishSubmit-button" style="float: right" type="submit" value="Submit" class="submit-action"/></span>
             </div>
             <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
         </div>
@@ -299,7 +301,9 @@
     </form>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="scripts/jquery-ui.min.js" type="text/javascript"></script>
+<script src="scripts/contentbuilder.js" type="text/javascript"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="publish.js"></script>
 </body>

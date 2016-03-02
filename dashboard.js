@@ -3,28 +3,29 @@
  */
 
 
-init();
+function updateCount(){
+    var num1 = document.getElementById("count1");
+    var count1 = parseInt(num1.innerText);
+    var num2 = document.getElementById("count2");
+    var count2 = parseInt(num2.innerText);
+    var num3 = document.getElementById("count3");
+    var count3 = parseInt(num3.innerText);
+    var num4 = document.getElementById("count4");
+    var count4 = parseInt(num4.innerText);
+    var num5 = document.getElementById("count5");
+    var count5 = parseInt(num5.innerText);
 
-function init(){
-    var count1 = 10143;
-    var count2 = 5116;
-    var count3 = 9989;
-    var count4 = 13734;
-    var count5 = 6157;
+    count1+=5;
+    count2+=2;
+    count3+=3;
+    count4+=1;
+    count5+=4;
 
-    setInterval(function(){
-        count1+=5;
-        count2+=2;
-        count3+=3;
-        count4+=1;
-        count5+=4;
-
-        document.getElementById("count1").innerHTML = count1;
-        document.getElementById("count2").innerHTML = count2;
-        document.getElementById("count3").innerHTML = count3;
-        document.getElementById("count4").innerHTML = count4;
-        document.getElementById("count5").innerHTML = count5;
-    }, 2000);
+    document.getElementById("count1").innerHTML = count1;
+    document.getElementById("count2").innerHTML = count2;
+    document.getElementById("count3").innerHTML = count3;
+    document.getElementById("count4").innerHTML = count4;
+    document.getElementById("count5").innerHTML = count5;
 }
 
 

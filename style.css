@@ -38,6 +38,7 @@
 .Publishmodal-content{
     background-color: #fefefe;
     margin: 5% auto; /* 15% from the top and centered */
+    margin-left: 21%;
     padding-bottom: 25px;
     border: 1px solid #888;
     width: 56%; /* Could be more or less, depending on screen size */
@@ -332,8 +333,8 @@ input[type='radio']:checked:before {
 .table-content{
     background-color: white;
     border: thin solid lightgray;
-    width: 67%;
-    float: left;
+    /*width: 67%;*/
+    /*float: left;*/
     /*margin-top: 15px;*/
     margin-left: 20px;
 }
@@ -366,7 +367,7 @@ input[type='radio']:checked:before {
 }
 
 span{
-    margin-left: 11px;
+    margin-left: 20px;
     cursor: pointer;
 }
 
@@ -448,7 +449,7 @@ textarea {
 }
 
 .tag-input{
-    width: 803px;
+    width: 939px;
     height: 40px;
     margin-left: 20px;
     margin-top: 20px;
@@ -660,6 +661,11 @@ select:focus{
     margin-top: 19px;
     float: right;
 
+}
+
+
+.dashboard-guide:hover{
+    background-color: blue;
 }
 
 #admin-editRole:disabled{
