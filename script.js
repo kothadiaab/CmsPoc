@@ -58,7 +58,7 @@ function buttonToggle(){
     }
 
     if(userCheckBox1.checked){
-        document.getElementById("user1-row").style.backgroundColor = "lightgrey";
+        document.getElementById("user1-row").style.backgroundColor = "#F5F5DC";
         for(var i = 0; i<userCheck1.length; i++){
             userCheck1[i].disabled = false;
         }
@@ -66,11 +66,14 @@ function buttonToggle(){
 
     if(!userCheckBox1.checked){
         document.getElementById("user1-row").style.backgroundColor = "#F8F8F8";
+        for(var i = 0; i<userCheck1.length; i++){
+            userCheck1[i].disabled = true;
+        }
     }
 
 
     if(userCheckBox2.checked){
-        document.getElementById("user2-row").style.backgroundColor = "lightgrey";
+        document.getElementById("user2-row").style.backgroundColor = "#F5F5DC";
         for(var i = 0; i<userCheck2.length; i++){
             userCheck2[i].disabled = false;
         }
@@ -78,11 +81,14 @@ function buttonToggle(){
 
     if(!userCheckBox2.checked){
         document.getElementById("user2-row").style.backgroundColor = "#F8F8F8";
+        for(var i = 0; i<userCheck2.length; i++){
+            userCheck2[i].disabled = true;
+        }
     }
 
 
     if(userCheckBox3.checked){
-        document.getElementById("user3-row").style.backgroundColor = "lightgrey";
+        document.getElementById("user3-row").style.backgroundColor = "#F5F5DC";
         for(var i = 0; i<userCheck3.length; i++){
             userCheck3[i].disabled = false;
         }
@@ -90,11 +96,14 @@ function buttonToggle(){
 
     if(!userCheckBox3.checked){
         document.getElementById("user3-row").style.backgroundColor = "#F8F8F8";
+        for(var i = 0; i<userCheck3.length; i++){
+            userCheck3[i].disabled = true;
+        }
     }
 
 
     if(userCheckBox4.checked){
-        document.getElementById("user4-row").style.backgroundColor = "lightgrey";
+        document.getElementById("user4-row").style.backgroundColor = "#F5F5DC";
         for(var i = 0; i<userCheck4.length; i++){
             userCheck4[i].disabled = false;
         }
@@ -102,11 +111,14 @@ function buttonToggle(){
 
     if(!userCheckBox4.checked){
         document.getElementById("user4-row").style.backgroundColor = "#F8F8F8";
+        for(var i = 0; i<userCheck4.length; i++){
+            userCheck4[i].disabled = true;
+        }
     }
 
 
     if(userCheckBox5.checked){
-        document.getElementById("user5-row").style.backgroundColor = "lightgrey";
+        document.getElementById("user5-row").style.backgroundColor = "#F5F5DC";
         for(var i = 0; i<userCheck5.length; i++){
             userCheck5[i].disabled = false;
         }
@@ -114,6 +126,9 @@ function buttonToggle(){
 
     if(!userCheckBox5.checked){
         document.getElementById("user5-row").style.backgroundColor = "#F8F8F8";
+        for(var i = 0; i<userCheck5.length; i++){
+            userCheck5[i].disabled = true;
+        }
     }
 
 }

@@ -31,7 +31,7 @@ h6 {font-size: 0.85em;}
     font-style: italic;
 }
 /*a {color: #08c9b9;}*/
-hr {border:none;border-top: rgba(0, 0, 0, 0.18) 1px solid;margin-top: 2em;margin-bottom: 2em;}    
+hr {border:none;border-top: rgba(0, 0, 0, 0.18) 1px solid;}
 img {max-width:100%;}
 figure {margin:0}
 @media all and (max-width: 1024px) {
