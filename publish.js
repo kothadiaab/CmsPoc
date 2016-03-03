@@ -97,7 +97,7 @@ jQuery(document).ready(function ($) {
         //toolbar: 'left',
         toolbarDisplay: false,
         //snippetPageSliding: true,
-        snippetFile: '../assets/default/snippets.html'
+        snippetFile: 'snippets.html'
     });
 
     document.getElementById("contentarea").style.minHeight = "300px";
