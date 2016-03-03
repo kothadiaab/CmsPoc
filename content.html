@@ -53,7 +53,7 @@
                         <span><img src="images/list2.png" alt="Number List" title="Number List"/></span>
                         <span><img src="images/link.png" alt="Link" title="Link"/></span>
                         <span><img src="images/img.png" alt="Image" title="Image"/></span>
-                        <span><img src="images/Listing.png" alt="Listing" title="Listing"/></span>
+                        <span id="listing-span"><img id="listing-image" onclick="listingPop()" src="images/Listing.png" alt="Listing" title="Listing"/></span>
                         <span><img src="images/collection.png" alt="Collection" title="Collection"/></span>
                         <span><img src="images/tracking.png" alt="Tracking" title="Tracking"/></span>
                     </div>
@@ -301,6 +301,46 @@
         </div>
     </form>
 </div>
+
+
+
+<div id="listingModal" class="listing-modal">
+    <!--<form method="get" action="dashboard.html">-->
+    <div id="listingModal-content" class="listingModal-content">
+        <!--<div class="h2title">CHOOSE TEMPLATE</div>-->
+        <div>
+            <p id="listing-cancel" class="close" aria-label="Close" style="margin-top: 5px; margin-right: 5px"><img src="images/close.png" alt=""/></p>
+            <h2 class="successPublish-data" style="text-indent: 15px">Listing</h2>
+        </div>
+        <div id="listing-html" class="col-sm-12">
+            <div class="col-sm-12">
+                <input type="text" id="keytxt" placeholder="Search.."/>
+                <span><button id="search-btn" onclick="insertListing()">Search</button></span>
+            </div>
+            <div class="col-sm-12" id="cntDiv" style="margin:10px 0 0 2px"></div>
+            <div>&nbsp;</div>
+            <br style="clear: both"/>
+            <div class="col-sm-12 table-responsive">
+                <table id="listingTable" style="display:none" class="table table-striped table-hover">
+                    <tr>
+                        <th class="col-sm-4" style="text-align: center; font-weight: bold">Item URL</th>
+                        <th class="col-sm-3" style="text-align: center; font-weight: bold">Item Title</th>
+                        <th class="col-sm-5" style="text-align: center; font-weight: bold">Image</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br style="clear:both;"/>
+        <hr/>
+        <div class="col-sm-12">
+            <span><input id="listingAdd-button" style="float: right" type="submit" value="Add URL" class="submit-action"/></span>
+            <input id="listingCancel-button" type="reset" value="Cancel" class="cancelSubmit-action" style="margin-left: 0px; margin-right: 10px; float: right"/>
+        </div>
+        <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+    </div>
+    <!--</form>-->
+</div>
+
 
 <script src="scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="scripts/jquery-ui.min.js" type="text/javascript"></script>
