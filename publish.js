@@ -97,7 +97,7 @@ jQuery(document).ready(function ($) {
         //toolbar: 'left',
         toolbarDisplay: false,
         //snippetPageSliding: true,
-        snippetFile: 'https://github.com/kothadiaab/CmsPoc/blob/master/snippets.html'
+        snippetFile: 'snippets.html'
     });
 
     document.getElementById("contentarea").style.minHeight = "300px";
