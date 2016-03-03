@@ -18,7 +18,7 @@
     </header>
 
     <div class="col-sm-7" style="margin-left: 11px">
-        <span><small><a style="text-decoration: none; font-family: sans-serif;" href="gds.html">Home</a></small></span>
+        <span><small><a style="text-decoration: none; font-family: sans-serif;" href="index.html">Home</a></small></span>
         <span style="margin-right: -20px"><img src="images/breacrumb_arrow-1.png" alt=""/></span>
         <span style="margin-left: 0px; font-family: sans-serif"><small>create guide</small></span>
     </div>
@@ -27,7 +27,7 @@
     </div>
 
     <!--<div class="col-sm-12" style="margin-left: 11px">-->
-        <!--<span><small><a style="text-decoration: none; font-family: sans-serif;" href="gds.html">Home</a></small></span>-->
+        <!--<span><small><a style="text-decoration: none; font-family: sans-serif;" href="index.html">Home</a></small></span>-->
         <!--<span style="margin-left: 0px; font-family: sans-serif"><small>-> create guide</small></span>-->
         <!--<span><small><a style="text-decoration: none; font-family: sans-serif; float: right; margin-right: 111px" href="dashboard.html">My Dashboard</a></small></span>-->
     <!--</div>-->
@@ -62,6 +62,7 @@
             <tr>
                 <td>
                     <div class="col-sm-12" id="contentarea">
+                        <div id="listing-url" style="text-decoration: underline; color: blue"></div>
                     </div>
                         <!--<div class="col-sm-12">-->
                             <!--<textarea class="textarea-align" name="" cols="83" rows="6" placeholder="Begin writing the section"></textarea>-->
@@ -115,7 +116,7 @@
     <br style="clear: both"/>
     <div class="col-sm-9" style="margin-left: 30px">
         <div style="float: right;">
-            <a id="content-cancel" href="gds.html" style="display: none;"></a>
+            <a id="content-cancel" href="index.html" style="display: none;"></a>
             <input class="cancel-content" type="reset" id="cancel-content" value="Cancel" onclick="document.getElementById('content-cancel').click(); return false;"/>
             <a id="draft-dashboard" href="dashboard.html" style="display: none;"></a>
             <input class="save-draft" type="submit" id="save-draft" value="Save as Draft" onclick="document.getElementById('draft-dashboard').click(); return false;"/>
@@ -333,7 +334,7 @@
         <br style="clear:both;"/>
         <hr/>
         <div class="col-sm-12">
-            <span><input id="listingAdd-button" style="float: right" type="submit" value="Add URL" class="submit-action"/></span>
+            <span><input id="listingAdd-button" onclick="addUrl()" style="float: right" type="submit" value="Add URL" class="submit-action"/></span>
             <input id="listingCancel-button" type="reset" value="Cancel" class="cancelSubmit-action" style="margin-left: 0px; margin-right: 10px; float: right"/>
         </div>
         <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
