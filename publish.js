@@ -95,8 +95,12 @@ jQuery(document).ready(function ($) {
         //zoom: 0.85,
         snippetOpen: true,
         //toolbar: 'left',
-        snippetFile: 'assets/default/snippets.html'
+        toolbarDisplay: false,
+        //snippetPageSliding: true,
+        snippetFile: '../assets/default/snippets.html'
     });
+
+    document.getElementById("contentarea").style.minHeight = "300px";
 
 });
 
@@ -129,6 +133,9 @@ String.prototype.replaceTokens   = function ()
     return rv;
 }
 
+
+var tableData = [];
+
 function insertListing(){
 
     var replaceKeyWord="#1#" ,
@@ -150,7 +157,7 @@ function insertListing(){
 
 //            console.log(data);
 
-
+            $('#listingTable tr:gt(0)').remove();
             var items = data.findItemsAdvancedResponse[0].searchResult[0].item, oRowWithData, oLnkwithData;
 
             for (var item in items) {
@@ -163,6 +170,15 @@ function insertListing(){
             $("#listingTable").show();
             oLnkwithData = anchorTxt.replaceTokens(data.findItemsAdvancedResponse[0].itemSearchURL[0],srchTxt);
             $("#cntDiv").html(oLnkwithData);
+            $("div.table-responsive table tbody tr").click(function() {
+                tableData = $(this).children("td").map(function() {
+                    return $(this).text();
+                }).get();
+
+                $(this).children("td").css('background-color', '#F5F5DC');
+                //document.getElementById("listing-url").innerHTML = $.trim(tableData[0]);
+                //alert("Your data is: " + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
+            });
         }
     });
 
@@ -186,13 +202,19 @@ listingCancel.onclick = function() {
     listingModal.style.display = "none";
 }
 
-$("div.table-responsive table tbody tr").click(function() {
-    var tableData = $(this).children("td").map(function() {
-        return $(this).text();
-    }).get();
 
-    alert("Your data is: " + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
-});
+function addUrl(){
+
+    document.getElementById("listing-url").innerHTML = $.trim(tableData[0]);
+    listingModal.style.display = "none";
+    $('#listingTable tr:gt(0)').remove();
+    $("#listingTable").hide();
+    $("#cntDiv").html("");
+    document.getElementById("listingModal-content").style.height = '300px';
+    var inputEmp = document.getElementById("keytxt");
+    inputEmp.value = '';
+}
+
 
 
 
