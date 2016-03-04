@@ -14,7 +14,7 @@
     <div style="margin-left: 42px">
         <span><a style="text-decoration: none; font-family: sans-serif; margin-right: -20px" href="index.html">Home</a></span>
         <span><img src="images/breacrumb_arrow-1.png" alt=""/></span>
-        <span style="margin-left: 0px; font-family: sans-serif">My Dashboard</span>
+        <span style="margin-left: 0px; font-family: sans-serif">My Guides</span>
         <span><a style="text-decoration: none; font-family: sans-serif; margin-right: 40px; float: right" href="index.html">Buy Guides</a></span>
         <div>
             <input class="dashboard-guide" type="button" id="writeNewGuide" value="Write Guide"/>
@@ -24,14 +24,14 @@
     <div>&nbsp;</div>
     <div id="user-dashboard" style="margin-left: 50px; border: none">
         <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#dashboard">Dashboard</a></li>
+            <li class="active"><a data-toggle="tab" href="#dashboard">My Guides</a></li>
             <li><a data-toggle="tab" href="#metrics">Metrics</a></li>
         </ul>
 
         <div class="tab-content" style="border: 1px solid royalblue; margin-right: 35px">
             <div id="dashboard" class="tab-pane fade in active">
                 <div class="col-sm-4">
-                    <h3>My dashboard</h3>
+                    <h3>My Guides</h3>
                 </div>
                 <div class="col-sm-8">
                     <span style="float: right; margin-right: 15px"><input class="dashboard-search" type="search" placeholder="Search" style="text-indent: 5px"/></span>
@@ -81,7 +81,7 @@
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td class="col-sm-4" style="color: royalblue">5 tips for picking Western Digital HDD</td>
+                            <td class="col-sm-4" style="color: royalblue">3 tips for buying Car Decor gadgets</td>
                             <td>Feb 26, 2016</td>
                             <td>Published</td>
                             <td>
@@ -92,7 +92,7 @@
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td class="col-sm-4" style="color: royalblue">5 tips for picking Western Digital HDD</td>
+                            <td class="col-sm-4" style="color: royalblue">Effective ways of picking Computer processor</td>
                             <td>Feb 26, 2016</td>
                             <td>In Progress</td>
                             <td>
@@ -110,73 +110,91 @@
                 <br style="clear: both;"/>
             </div>
             <div id="metrics" class="tab-pane fade">
-                <div class="col-sm-12">
-                    <select style="margin: 15px 0px 10px 0px; width: 250px;">
-                        <option value="volvo">Select Published Metric</option>
-                        <option value="saab">Pageviews</option>
-                        <option value="opel">timeOnPage</option>
-                        <option value="audi">avgTimeOnPage</option>
-                    </select>
-                    <span>
-                        <input class="dashboard-guide" type="button" id="refresh-count" value="Refresh" onclick="updateCount()"/>
-                    </span>
-                </div>
-                <div>&nbsp;</div>
+                <!--<div class="col-sm-12">-->
+                    <!--<select style="margin: 15px 0px 10px 0px; width: 250px;">-->
+                        <!--<option value="volvo">Select Published Metric</option>-->
+                        <!--<option value="saab">Pageviews</option>-->
+                        <!--<option value="opel">timeOnPage</option>-->
+                        <!--<option value="audi">avgTimeOnPage</option>-->
+                    <!--</select>-->
+                    <!--<span>-->
+                        <!--<input class="dashboard-guide" type="button" id="refresh-count" value="Refresh" onclick="updateCount()"/>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<div>&nbsp;</div>-->
                 <div class="table-responsive col-sm-12">
-                    <table class="table table-bordered table-hover" style="margin-right: 15px">
-                        <tr>
-                            <th>#</th>
-                            <th>Title</th>
-                            <th>Count</th>
-                            <th>Published Date</th>
-                            <!--<th>Action</th>-->
-                        </tr>
-                        <tr>
-                            <td class="col-sm-1 col-centered">1</td>
-                            <td class="col-sm-4" style="color: royalblue">5 tips for picking Western Digital HDD</td>
-                            <td class="col-sm-2 col-centered" id="count1">10143</td>
-                            <td class="col-sm-2 col-centered">Feb 28, 2016</td>
-                            <!--<td class="col-sm-1 col-sm-offset-10">-->
-                                <!--<span><img src="images/update.png" alt=""/></span>-->
-                            <!--</td>-->
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td class="col-sm-4" style="color: royalblue">How to Buy a Car Traller on eBay</td>
-                            <td id="count2">5116</td>
-                            <td>March 1, 2016</td>
-                            <!--<td>-->
-                                <!--<span><img src="images/update.png" alt=""/></span>-->
-                            <!--</td>-->
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td class="col-sm-4" style="color: royalblue">Cool Home Decor Gadgets</td>
-                            <td id="count3">9989</td>
-                            <td>Jan 12, 2016</td>
-                            <!--<td>-->
-                                <!--<span><img src="images/update.png" alt=""/></span>-->
-                            <!--</td>-->
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td class="col-sm-4" style="color: royalblue">5 tips for picking Western Digital HDD</td>
-                            <td id="count4">13734</td>
-                            <td>Dec 01, 2015</td>
-                            <!--<td>-->
-                                <!--<span><img src="images/update.png" alt=""/></span>-->
-                            <!--</td>-->
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td class="col-sm-4" style="color: royalblue">5 tips for picking Western Digital HDD</td>
-                            <td id="count5">6157</td>
-                            <td>Feb 29, 2016</td>
-                            <!--<td>-->
-                                <!--<span><img src="images/update.png" alt=""/></span>-->
-                            <!--</td>-->
-                        </tr>
-                    </table>
+
+                    <div class="col-sm-12" style="margin: 27px">
+                        <div class="col-sm-6">
+                            <img src="images/countByTraffic.png" alt=""/>
+                        </div>
+                        <div class="col-sm-6">
+                            <img src="images/MostLiked.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="margin: 27px">
+                        <div class="col-sm-6">
+                            <img src="images/NumberOfViews.png" alt=""/>
+                        </div>
+                        <div class="col-sm-6">
+                            <img src="images/TimeSpent.png" alt=""/>
+                        </div>
+                    </div>
+
+                    <!--<table class="table table-bordered table-hover" style="margin-right: 15px">-->
+                        <!--<tr>-->
+                            <!--<th>#</th>-->
+                            <!--<th>Title</th>-->
+                            <!--<th>Count</th>-->
+                            <!--<th>Published Date</th>-->
+                            <!--&lt;!&ndash;<th>Action</th>&ndash;&gt;-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td class="col-sm-1 col-centered">1</td>-->
+                            <!--<td class="col-sm-4" style="color: royalblue">5 tips for picking Western Digital HDD</td>-->
+                            <!--<td class="col-sm-2 col-centered" id="count1">10143</td>-->
+                            <!--<td class="col-sm-2 col-centered">Feb 28, 2016</td>-->
+                            <!--&lt;!&ndash;<td class="col-sm-1 col-sm-offset-10">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span><img src="images/update.png" alt=""/></span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</td>&ndash;&gt;-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td>2</td>-->
+                            <!--<td class="col-sm-4" style="color: royalblue">How to Buy a Car Traller on eBay</td>-->
+                            <!--<td id="count2">5116</td>-->
+                            <!--<td>March 1, 2016</td>-->
+                            <!--&lt;!&ndash;<td>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span><img src="images/update.png" alt=""/></span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</td>&ndash;&gt;-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td>3</td>-->
+                            <!--<td class="col-sm-4" style="color: royalblue">Cool Home Decor Gadgets</td>-->
+                            <!--<td id="count3">9989</td>-->
+                            <!--<td>Jan 12, 2016</td>-->
+                            <!--&lt;!&ndash;<td>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span><img src="images/update.png" alt=""/></span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</td>&ndash;&gt;-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td>4</td>-->
+                            <!--<td class="col-sm-4" style="color: royalblue">5 tips for picking Western Digital HDD</td>-->
+                            <!--<td id="count4">13734</td>-->
+                            <!--<td>Dec 01, 2015</td>-->
+                            <!--&lt;!&ndash;<td>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span><img src="images/update.png" alt=""/></span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</td>&ndash;&gt;-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td>5</td>-->
+                            <!--<td class="col-sm-4" style="color: royalblue">5 tips for picking Western Digital HDD</td>-->
+                            <!--<td id="count5">6157</td>-->
+                            <!--<td>Feb 29, 2016</td>-->
+                            <!--&lt;!&ndash;<td>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span><img src="images/update.png" alt=""/></span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</td>&ndash;&gt;-->
+                        <!--</tr>-->
+                    <!--</table>-->
                 </div>
                 <br style="clear: both;"/>
             </div>
