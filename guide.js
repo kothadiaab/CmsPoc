@@ -1,4 +1,8 @@
 /**
+ * Created by abhedkothadia on 3/3/16.
+ */
+
+/**
  * Created by abhedkothadia on 2/27/16.
  */
 
@@ -97,7 +101,12 @@ jQuery(document).ready(function ($) {
         //toolbar: 'left',
         toolbarDisplay: false,
         //snippetPageSliding: true,
-        snippetFile: 'assets/default/snippets.html'
+        snippetFile: 'snippets.html',
+        onDrop: function (event, ui) {
+            //alert(ui.item.html());  //custom script here
+            if ($('#contentarea').data('contentbuilder'))
+                $('#contentarea').data('contentbuilder').destroy();
+        },
     });
 
     document.getElementById("contentarea").style.minHeight = "300px";
@@ -135,7 +144,6 @@ String.prototype.replaceTokens   = function ()
 
 
 var tableData = [];
-var keyword;
 
 function insertListing(){
 
@@ -145,7 +153,6 @@ function insertListing(){
     baseurl = baseurl.replaceToken(baseurl,"#1#" , srchTxt),
         trStr="<tr class='table'><td style='color: blue; text-decoration: underline; font-size: 12px; text-align: justify'>#1#</td><td>#2#</td><td><img src='#3#'/></td></tr>",
         anchorTxt ="You can buy an <a href='#1#'> #2# </a> on ebay.com";
-    keyword = srchTxt;
     $('#listingTable tr:gt(0)').remove();
     $("#listingTable").hide();
     $("#cntDiv").html("");
@@ -215,34 +222,6 @@ function addUrl(){
     document.getElementById("listingModal-content").style.height = '300px';
     var inputEmp = document.getElementById("keytxt");
     inputEmp.value = '';
-}
-
-//function addTracking(){
-//    document.getElementById("contentarea").innerHTML= "<div id='tracking' class='tracking-Content'>\
-//    if (typeof $trk !== 'undefined' && $trk.image && $trk.onRover) {\
-//        var originalImage = $trk.image;\
-//        $trk.image = jQuery('<img/>').css('display', 'none');\
-//        $trk.onRover(null, {'cp':<<pageid></pageid>,'imp':'<<id></id>'});\
-//        $trk.image = originalImage;\
-//    };\
-//</div>";
-//}
-
-var trackingBtn = document.getElementById("tracking-button");
-var trackingModal = document.getElementById("tracking-modal");
-var trackingTopCancel = document.getElementById("trackingTop-cancel");
-var trackingClose = document.getElementById("tracking-close");
-
-trackingBtn.onclick = function(){
-    trackingModal.style.display = "block";
-}
-
-trackingTopCancel.onclick = function() {
-    trackingModal.style.display = "none";
-}
-
-trackingClose.onclick = function() {
-    trackingModal.style.display = "none";
 }
 
 

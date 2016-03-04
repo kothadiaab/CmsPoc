@@ -42,28 +42,29 @@
             </tr>
             <tr>
                 <td class="editor-img">
-                    <div class="col-sm-12">
-                        <span><img src="images/paragraph.png" alt="Paragraph" title="Paragraph"/></span>
-                        <span><img src="images/Bold.png" alt="Bold" title="Bold"/></span>
-                        <span><img src="images/italic.png" alt="Italic" title="Italic"/></span>
-                        <span><img src="images/underline.png" alt="Code" title="Underline"/></span>
-                        <span><img src="images/Font.png" alt="Code" title="Font"/></span>
-                        <span><img src="images/fontColor.png" alt="Code" title="Font Color"/></span>
-                        <span><img src="images/list.png" alt="Bullet List" title="Bullet List"/></span>
-                        <span><img src="images/list2.png" alt="Number List" title="Number List"/></span>
-                        <span><img src="images/link.png" alt="Link" title="Link"/></span>
-                        <span><img src="images/img.png" alt="Image" title="Image"/></span>
-                        <span id="listing-span"><img id="listing-image" onclick="listingPop()" src="images/Listing.png" alt="Listing" title="Listing"/></span>
-                        <span><img src="images/collection.png" alt="Collection" title="Collection"/></span>
-                        <span><img src="images/tracking.png" alt="Tracking" title="Tracking"/></span>
+                    <div class="col-sm-7">
+
+                    </div>
+                    <div class="col-sm-5" style="float: right">
+                        <span style="float: right"><img id="tracking-button" src="images/tracking.png" alt="Tracking" title="Tracking"/></span>
+                        <span style="float: right;" id="coll-span"><img src="images/collection.png" alt="Collection" title="Collection"/></span>
+                        <span id="listing-span" style="float: right"><img id="listing-image" onclick="listingPop()" src="images/Listing.png" alt="Listing" title="Listing"/></span>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div class="col-sm-12" id="contentarea">
-                        <div id="listing-url" style="text-decoration: underline; color: blue"></div>
+                        <div id=”tracking” class="tracking-Content">
+                                if (typeof $trk !== 'undefined' && $trk.image && $trk.onRover) {
+                                var originalImage = $trk.image;
+                                $trk.image = jQuery('<img/>').css('display', 'none');
+                                $trk.onRover(null, {"cp":<<pageid></pageid>,"imp":"<<id></id>"});
+                                $trk.image = originalImage;
+                                };
+                        </div>
                     </div>
+                    <div id="listing-url" style="text-decoration: underline; color: blue"></div>
                         <!--<div class="col-sm-12">-->
                             <!--<textarea class="textarea-align" name="" cols="83" rows="6" placeholder="Begin writing the section"></textarea>-->
                         <!--</div>-->
@@ -139,6 +140,7 @@
                 <p class="close" aria-label="Close" style="margin-top: 30px; margin-right: 0px; height: 27px"><img src="images/close.png" alt=""/></p>
                 <h2 class="header-data">Preview</h2>
             </div>
+            <h5 style="text-align: center; color: red">(User can preview content added on editor over here.)</h5>
             <p class="publish-title"> 6 Things You Should Know About Galveston Bay<br/>Oysters</p>
             <div>
                 <p class="publish-subtitle"><i>Posted 11,24,2016</i></p>
@@ -269,8 +271,9 @@
             <p id="validationTop-cancel" class="close" aria-label="Close" style="margin-top: 5px; margin-right: 5px"><img src="images/close.png" alt=""/></p>
             <h2 class="successPublish-data">Validate</h2>
         </div>
+        <h5 style="text-align: center; color: red">(Validation service will be invoked here)</h5>
         <div>
-            <p class="publishSuccess-text">Category and content does not match!<br/>Please validate!</p><br/>
+            <p class="publishSuccess-text">Category and content does not match!<br/>Please validate!</p>
         </div>
         <br style="clear:both;"/>
         <hr/>
@@ -314,12 +317,15 @@
             <h2 class="successPublish-data" style="text-indent: 15px">Listing</h2>
         </div>
         <div id="listing-html" class="col-sm-12">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <input type="text" id="keytxt" placeholder="Search.."/>
                 <span><button id="search-btn" onclick="insertListing()">Search</button></span>
             </div>
+            <div class="col-sm-6">
+                <span><input id="listingAdd-button" onclick="addUrl()" style="float: right" type="submit" value="Add URL" class="submit-action"/></span>
+                <input id="listingCancel-button" type="reset" value="Cancel" class="cancelSubmit-action" style="margin-left: 0px; margin-right: 10px; float: right"/>
+            </div>
             <div class="col-sm-12" id="cntDiv" style="margin:10px 0 0 2px"></div>
-            <div>&nbsp;</div>
             <br style="clear: both"/>
             <div class="col-sm-12 table-responsive">
                 <table id="listingTable" style="display:none" class="table table-striped table-hover">
@@ -333,11 +339,28 @@
         </div>
         <br style="clear:both;"/>
         <hr/>
-        <div class="col-sm-12">
-            <span><input id="listingAdd-button" onclick="addUrl()" style="float: right" type="submit" value="Add URL" class="submit-action"/></span>
-            <input id="listingCancel-button" type="reset" value="Cancel" class="cancelSubmit-action" style="margin-left: 0px; margin-right: 10px; float: right"/>
-        </div>
         <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
+    </div>
+    <!--</form>-->
+</div>
+
+<div id="tracking-modal" class="tracking-modal">
+    <!--<form method="get" action="dashboard.html">-->
+    <div class="trackingModal-content">
+        <!--<div class="h2title">CHOOSE TEMPLATE</div>-->
+        <div>
+            <p id="trackingTop-cancel" class="close" aria-label="Close" style="margin-top: 5px; margin-right: 5px"><img src="images/close.png" alt=""/></p>
+            <h2 class="successPublish-data">Tracking</h2>
+        </div>
+        <div>
+            <p class="publishSuccess-text">Your tracking code has been added successfully! <br/><br/>Please click on html ('< >') button on editor to view added tracking code. </p>
+        </div>
+        <!--<br style="clear:both;"/>-->
+        <hr/>
+        <div>
+            <input id="tracking-close" type="reset" value="Close" class="dashboard-action"/>
+        </div>
+        <div>&nbsp;</div>
     </div>
     <!--</form>-->
 </div>

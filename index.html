@@ -545,11 +545,16 @@
                         </div>
                         <div class="daily-deals">
                             <div class="myguides">
-                                <div class="writeBtn">
-                                    <a id="writeNewGuide" class="btn btn-prim" href="javascript:;" target="">Write a guide</a>
+                                <div class="writeBtn circle-button">
+                                    <a id="writeNewGuide" class="btn btn-prim" href="javascript:;" target="" style="width: 100px">Write a guide</a>
                                 </div>
                                 <div class="mgnTop">
                                     <a href="dashboard.html">View My Guides</a>
+                                </div>
+                                <div>&nbsp;</div>
+                                <div>&nbsp;</div>
+                                <div class="flash begin-indicator">
+                                    <p>Click Above to Begin</p>
                                 </div>
                             </div>
                         </div>
@@ -565,7 +570,7 @@
 <p style="text-align: center"><small style="color: red;">Disclaimer: This is an indicative proof of concept for illustrative purpose only and is not fully functional.</small></p>
 
 <div id="templateModal" class="template-modal">
-    <form method="get" action="content.html">
+    <form id="form-url" method="get">
         <div class="modal-content">
             <!--<div class="h2title">CHOOSE TEMPLATE</div>-->
             <div class="col-sm-12 template-header-data">
@@ -582,7 +587,7 @@
                     <img class="img-dim" src="images/basic.png" alt="Basic template image"/>
                     <!--<div>&nbsp;</div>-->
                     <div>
-                        <input id="radio1" class="radio-class" type="radio" name="radio-group1" value="Basic" checked/>
+                        <input id="radio1" class="radio-class" type="radio" name="radio-group1" value="Basic"/>
                     </div>
 
                     <!--<div>&nbsp;</div>-->
@@ -629,7 +634,7 @@
             <br style="clear:both;"/>
             <hr>
             <div>
-                <input id="cont-button" type="submit" value="Continue" class="cont-action"/>
+                <input id="cont-button" type="submit" value="Continue" onclick="redirectPage()" class="cont-action"/>
                 <input id="cancel-button" type="reset" value="Cancel" class="cancel-action"/>
             </div>
             <br style="clear: both"/>
