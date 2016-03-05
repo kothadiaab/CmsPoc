@@ -275,6 +275,8 @@ function redirectPage(){
         case 3:
             redirectUrl.action = 'list.html';
             break;
+        default: redirectUrl.action = 'content.html';
+            break;
     }
 }
 
