@@ -142,7 +142,7 @@ function insertListing(){
         baseurl="http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsAdvanced&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=ebayaed51-fd9d-4e40-8149-4a3546a65ad&RESPONSE-DATA-FORMAT=XML&REST-PAYLOAD&paginationInput.entriesPerPage=2&keywords=#1#",
         srchTxt = $("#keytxt").val()
     baseurl = baseurl.replaceToken(baseurl,"#1#" , srchTxt),
-        trStr="<tr class='table'><td style='color: blue; text-decoration: underline; font-size: 12px; text-align: justify'>#1#</td><td>#2#</td><td><img src='#3#'/></td></tr>",
+        trStr="<tr class='table'><td><input class='radio-class' type='radio'/></td><td style='color: blue; text-decoration: underline; font-size: 12px; text-align: justify'>#1#</td><td>#2#</td><td><img src='#3#'/></td></tr>",
         anchorTxt ="You can buy an <a href='#1#'> #2# </a> on ebay.com";
     $('#listingTable tr:gt(0)').remove();
     $("#listingTable").hide();
@@ -205,7 +205,7 @@ listingCancel.onclick = function() {
 
 function addUrl(){
 
-    document.getElementById("listing-url").innerHTML = $.trim(tableData[0]);
+    document.getElementById("listing-url").innerHTML = $.trim(tableData[1]);
     listingModal.style.display = "none";
     $('#listingTable tr:gt(0)').remove();
     $("#listingTable").hide();

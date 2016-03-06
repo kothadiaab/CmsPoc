@@ -252,7 +252,7 @@ input[type='radio'] {
     height:17px;
     border:1px solid darkgray;
     border-radius:50%;
-    outline:none;
+    outline-width:0;
     cursor: pointer;
 }
 
@@ -273,6 +273,7 @@ input[type='radio']:before {
 input[type='radio']:checked:before {
     background:royalblue;
     cursor: pointer;
+    outline: none;
 }
 
 .template-text{
@@ -830,18 +831,33 @@ table td:nth-of-type(2) {
 }
 
 .flash {
-    -webkit-animation-duration: 4s;
-    animation-duration: 4s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     animation-name: flash;
 }
 
-
-#coll-span:hover{
-    cursor: not-allowed;
-}
-
 .tracking-Content{
     display: none;
+}
+
+.btn{
+    background-color: white;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+.btn:hover{
+    background-color: lightgrey;
+}
+.btn.sharp {
+    border-radius:0;
+}
+
+.highlight-button{
+    border: 5px solid red; !important;
+    border-radius: 50px; !important;
+    background-color: yellow; !important;
 }

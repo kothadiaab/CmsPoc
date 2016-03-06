@@ -80,3 +80,60 @@ var radioCheck3 = document.getElementById("radio3")
 divClick3.onclick = function(){
     radioCheck3.checked = true;
 }
+
+var flag = null;
+
+var divClick1 = document.getElementById("template1");
+var radioCheck1 = document.getElementById("radio1")
+
+var divClick2 = document.getElementById("template2");
+var radioCheck2 = document.getElementById("radio2");
+
+var divClick3 = document.getElementById("template3");
+var radioCheck3 = document.getElementById("radio3");
+
+divClick1.onclick = function(){
+    radioCheck1.checked = true;
+    divClick1.style.backgroundColor = "#F0EDEA";
+    divClick2.style.backgroundColor = "white";
+    divClick3.style.backgroundColor = "white";
+    flag = 1;
+}
+
+
+divClick2.onclick = function(){
+    radioCheck2.checked = true;
+    divClick1.style.backgroundColor = "white";
+    divClick2.style.backgroundColor = "#F0EDEA";
+    divClick3.style.backgroundColor = "white";
+    flag = 2;
+}
+
+
+divClick3.onclick = function(){
+    radioCheck3.checked = true;
+    divClick1.style.backgroundColor = "white";
+    divClick2.style.backgroundColor = "white";
+    divClick3.style.backgroundColor = "#F0EDEA";
+    flag = 3;
+}
+
+
+function redirectPage(){
+    console.log(flag);
+    var redirectUrl = document.getElementById("form-url");
+    switch (flag){
+        case 1:
+            redirectUrl.action = 'guide.html';
+            break;
+
+        case 2:
+            redirectUrl.action = 'content.html';
+            break;
+        case 3:
+            redirectUrl.action = 'list.html';
+            break;
+        default: redirectUrl.action = 'content.html';
+            break;
+    }
+}
